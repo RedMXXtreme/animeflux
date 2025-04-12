@@ -325,7 +325,8 @@ const Header = () => {
     "Attack on Titan Season 3 Part 2": { link: "https://animeflux-attack-on-titan-s03-part-2.pages.dev/", img: "https://static1.animekai.to/93/i/b/e9/6766496c980c9@300.jpg", year: "2019", type: "TV", rating: "R" },
     "Attack on Titan Season 4 Part 1": { link: "https://animeflux-attack-on-titan-s04-part-1.pages.dev/", img: "https://static1.animekai.to/83/i/4/9a/6766499bd3723@300.jpg", year: "2020", type: "TV", rating: "R" },
     "Attack on Titan Season 4 Part 2": { link: "https://animeflux-attack-on-titan-s04-part-2.pages.dev/", img: "https://static1.animekai.to/2d/i/0/1e/67664a0891c70@300.jpg", year: "2022", type: "TV", rating: "R" },
-    "Attack on Titan Speacial": { link: "https://animeflux-attack-on-titan-special.pages.dev/", img: "https://static1.animekai.to/a0/i/f/68/6766493f4e009@300.jpg", year: "2023", type: "TV", rating: "R" },    "Demon Slayer: Kimetsu no Yaiba": { link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-arc.pages.dev/", img: "https://static1.animekai.to/70/i/5/79/67664a9bdad80@300.jpg", year: "2019", type: "TV", rating: "PG-R" },
+    "Attack on Titan Speacial": { link: "https://animeflux-attack-on-titan-special.pages.dev/", img: "https://static1.animekai.to/a0/i/f/68/6766493f4e009@300.jpg", year: "2023", type: "TV", rating: "R" },    
+    "Demon Slayer: Kimetsu no Yaiba": { link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-arc.pages.dev/", img: "https://static1.animekai.to/70/i/5/79/67664a9bdad80@300.jpg", year: "2019", type: "TV", rating: "PG-R" },
     "Demon Slayer: Kimetsu no Yaiba Mugen Train Arc": {link:"https://animeflux-demon-slayer-kimetsu-no-yaiba-mugen-train-arc.pages.dev/", img: "https://static1.animekai.to/78/i/0/44/67664a81b5dd4@300.jpg", year: "2021", type: "Movie", rating: "PG-R"},
     "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc": {link:"https://animeflux-demon-slayer-kimetsu-no-yaiba-entertainment-arc.pages.dev/", img: "https://static1.animekai.to/d3/i/e/9c/67664a00ed86e@300.jpg", year: "2021", type: "TV", rating: "PG-R"},
     "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc": {link:"https://animeflux-demon-slayer-kimetsu-no-yaiba-swordsmith-village-arc.pages.dev/", img: "https://static1.animekai.to/28/i/d/60/67664938b51c4@300.jpg", year: "2023", type: "TV", rating: "PG-R"},
@@ -335,6 +336,19 @@ const Header = () => {
     "Jujutsu Kaisen S2": {link:"https://animeflux-jujutsukaisen-s02.pages.dev/", img: "https://static1.animekai.to/44/i/9/b8/6766493099d89@100.jpg", year: "2021", type: "TV", rating: "PG-13"},
     "Jujutsu Kaisen 0": {link:"", img: "https://static1.animekai.to/8d/i/d/0f/67664a6c4ae80@100.jpg", year: "2022", type: "TV", rating: "PG-13"},
     "Puka Puka Juju": {link:"", img: "https://static1.animekai.to/a5/i/b/76/67664a0d0aeb9@100.jpg", year: "2023", type: "TV", rating: "PG-13"},
+    "Sakamot Days": { link:"https://animeflux-sakamoto-days.pages.dev/", img: "https://static1.animekai.to/09/i/e/90/6782958e57c23.jpg", year: "2025", type: "TV", rating: "R" },
+    "Tower of god s01": { link:"https://animeflux-tower-of-god-s01.pages.dev/", img: "https://static1.animekai.to/ca/i/8/0a/67664a6d3f5a2.jpg", year: "2020", type: "TV", rating: "PG-13" },
+    "Tower of god s02": { link:"https://animeflux-tower-of-god-s02.pages.dev/", img: "https://static1.animekai.to/3c/i/b/05/676649ad3a95d.jpg", year: "2024", type: "TV", rating: "PG-13" },
+    "Wind Breaker": { link:"https://animeflux-windbreaker.pages.dev/", img: "https://static1.animekai.to/bd/i/5/4c/676649ee7430d.jpg", year: "2024", type: "TV", rating: "PG-13" },
+    "One Punch man s01": { link:"https://animeflux-one-punch-man-s01.pages.dev/", img: "https://static1.animekai.to/db/i/0/b6/67664ab866dbf.jpg", year: "2015", type: "TV", rating: "R" },
+    "One Punch man s02": { link:"https://animeflux-one-punch-man-s02.pages.dev/", img: "https://static1.animekai.to/8d/i/b/f4/676649c3e82f2.jpg", year: "2019", type: "Tv", rating: "R" },
+    "Ao Ashi": { link:"https://animeflux-ao-ashi.pages.dev/", img: "https://static1.animekai.to/03/i/3/1f/6766494451516.jpg", year: "2022", type: "TV", rating: "PG-13" },
+    "Blue Lock s01": { link:"https://animeflux-bluelock-s01.pages.dev/", img: "https://static1.animekai.to/34/i/3/bd/67664ab2e7771.jpg", year: "2022", type: "TV", rating: "PG-13" },
+    "Blue Lock s02": { link:"devhttps://animeflux-bluelock-s02.pages./", img: "https://static1.animekai.to/56/i/d/36/67664aa7a69dd.jpg", year: "2024", type: "TV", rating: "PG-13" },
+    "God of high school": { link:"/https://animeflux-god-of-high-school.pages.dev", img: "https://static1.animekai.to/4d/i/1/d8/67664984e84a9.jpg", year: "2020", type: "TV", rating: "PG-13" },
+    "Psyco Pass 1": { link:"https://animeflux-psyco-pass-2-first-inspector.pages.dev/", img: "https://static1.animekai.to/f1/i/f/ba/67664970838b9.jpg", year: "2012", type: "TV", rating: "R" },
+    "Code Geass: Lelouch of the Rebellion": { link:"https://animeflux-code-geass-lelouch-of-the-rebellion.pages.dev/", img: "https://static1.animekai.to/4d/i/3/52/67664928cd5ca.jpg", year: "2006", type: "TV", rating: "R" },
+    "That Time I Got Reincarnated as a Slime S01": { link:"https://animeflux-that-time-i-got-reicarnated-as-slime-s01.pages.dev/", img:"https://static1.animekai.to/12/i/9/08/676649d245eb3.jpg", year: "2018", type: "TV", rating: "PG-13" },
   };
 
     const [searchQuery, setSearchQuery] = useState("");
@@ -377,6 +391,13 @@ const Header = () => {
             "https://animeflux-s.pages.dev/",
             "https://animeflux-sololevelingseason2arisefromtheshado-s02.pages.dev/",
             "https://animeflux-solo-leveling-s01.pages.dev/",
+	    "https://animeflux-attack-on-titan-s02.pages.dev/",
+	    "https://animeflux-attack-on-titan.pages.dev/",
+	    "https://animeflux-attack-on-titan-s03-part-2.pages.dev/",
+	    "https://animeflux-attack-on-titan-s03-part-1.pages.dev/",
+	    "https://animeflux-attack-on-titan-s04-part-1.pages.dev/",
+	    "https://animeflux-attack-on-titan-s04-part-2.pages.dev/",
+	    
         ]
         const randomPage = pages[Math.floor(Math.random() * pages.length)];
         window.location.href = randomPage;
