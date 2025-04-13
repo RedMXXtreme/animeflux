@@ -9,7 +9,7 @@ function App() {
         trending: [
             {
                 image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/65f92e6e315a931ef872da4b312442b8.jpg",
-                link: "https://animeflux-sololevelingseason2arisefromtheshado-s02.pages.dev/",
+                link: "https://https://animeflux-solo-leveling-arise-from-the-shadow-s02.pages.dev/",
             },
             {
                 image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/82402f796b7d84d7071ab1e03ff7747a.jpg",
@@ -29,11 +29,11 @@ function App() {
             },
             {
                 image: "https://demonslayer-anime.com/hta/assets/img/img_kv.jpg",
-                link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-hashira-training-arc.pages.dev/",
+                link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-hashira-training.pages.dev/",
             },
             {
                 image: "https://static1.animekai.to/28/i/d/60/67664938b51c4.jpg",
-                link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-swordsmith-village-arc.pages.dev/",
+                link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-swordsmith-village.pages.dev/",
             },
             {
                 image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/b51f863b05f30576cf9d85fa9b911bb5.png",
