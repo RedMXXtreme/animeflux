@@ -464,6 +464,7 @@ const Banner = () => {
         "https://wallpapercave.com/wp/wp11268662.jpg",
         "https://static.animecorner.me/2023/11/1698837096-72473.jpg",
         "https://horizons.pokemon.com/images/share-fb.jpg",
+	"https://cdn.oneesports.gg/cdn-data/2024/09/Anime_Shangri-LaFrontier_Season2_PromoPoster.jpg",
         // Add more image URLs as needed
     ];
 
@@ -472,6 +473,7 @@ const Banner = () => {
         "Epic Adventures Await - Watch Now!",
         "Dive into the Anime World!",
         "Catch 'em all in Pokemon!",
+	"Shangri-La Frontier",
         // Add more texts corresponding to the images
     ];
 
@@ -480,6 +482,7 @@ const Banner = () => {
         "https://www.youtube.com/watch?v=wyiZWYMilgk",
         "https://www.youtube.com/watch?v=Px3mYbqYSEM",
         "https://youtu.be/_c_hMehCORQ?si=wJgHL9AtGSxZcftJ",
+	"https://www.youtube.com/watch?v=VA0rTiDlm8w&ab_channel=Crunchyroll",
         // Add more links corresponding to the images
     ];
 
@@ -488,6 +491,7 @@ const Banner = () => {
         "https://animeflux-demon-slayer-kimetsu-no-yaiba-arc.pages.dev/",
         "https://animeflux-solo-leveling-s01.pages.dev/",
         "https://youtu.be/_c_hMehCORQ?si=wJgHL9AtGSxZcftJ",
+	"https://animeflux-slf-s02.pages.dev/"
         // Add more links corresponding to the images
     ];
 
