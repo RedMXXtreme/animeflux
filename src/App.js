@@ -539,7 +539,6 @@ const Banner = () => {
     );
 };
 
-
 const Row = ({ title, posters = [] }) => {
     return (
         <div className="mt-8">
@@ -557,15 +556,9 @@ const Row = ({ title, posters = [] }) => {
                     </a>
                 ))}
             </div>
-
-
-
-
             </div>
         </div>
     );
 };
-
-  
 
 export default App;
