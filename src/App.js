@@ -465,6 +465,7 @@ const Banner = () => {
         "https://static.animecorner.me/2023/11/1698837096-72473.jpg",
         "https://horizons.pokemon.com/images/share-fb.jpg",
 	"https://cdn.oneesports.gg/cdn-data/2024/09/Anime_Shangri-LaFrontier_Season2_PromoPoster.jpg",
+	"https://anitrendz.net/news/wp-content/uploads/2025/03/makina-san-is-a-love-bot-anime-key-visual-scaled-e1742934440120.jpg",
         // Add more image URLs as needed
     ];
 
@@ -474,6 +475,7 @@ const Banner = () => {
         "Dive into the Anime World!",
         "Catch 'em all in Pokemon!",
 	"Shangri-La Frontier",
+	"Makina-san's a Love Bot",
         // Add more texts corresponding to the images
     ];
 
@@ -483,6 +485,7 @@ const Banner = () => {
         "https://www.youtube.com/watch?v=Px3mYbqYSEM",
         "https://youtu.be/_c_hMehCORQ?si=wJgHL9AtGSxZcftJ",
 	"https://www.youtube.com/watch?v=VA0rTiDlm8w&ab_channel=Crunchyroll",
+	"https://www.youtube.com/watch?v=kpTMzdEpciA&ab_channel=DailyAnime%21",
         // Add more links corresponding to the images
     ];
 
@@ -492,6 +495,7 @@ const Banner = () => {
         "https://animeflux-solo-leveling-s01.pages.dev/",
         "https://youtu.be/_c_hMehCORQ?si=wJgHL9AtGSxZcftJ",
 	"https://animeflux-slf-s02.pages.dev/"
+	"https://animeflux-makina-san's-a-love-bot.pages.dev/"
         // Add more links corresponding to the images
     ];
 
