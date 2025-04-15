@@ -494,8 +494,8 @@ const Banner = () => {
         "https://animeflux-demon-slayer-kimetsu-no-yaiba-arc.pages.dev/",
         "https://animeflux-solo-leveling-s01.pages.dev/",
         "https://youtu.be/_c_hMehCORQ?si=wJgHL9AtGSxZcftJ",
-	"https://animeflux-slf-s02.pages.dev/"
-	"https://animeflux-makina-san's-a-love-bot.pages.dev/"
+	"https://animeflux-slf-s02.pages.dev/",
+	"https://animeflux-makina-san's-a-love-bot.pages.dev/",
         // Add more links corresponding to the images
     ];
 
