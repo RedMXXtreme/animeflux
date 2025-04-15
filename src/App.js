@@ -13,7 +13,7 @@ function App() {
             },
             {
                 image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/82402f796b7d84d7071ab1e03ff7747a.jpg",
-                link: "https://animeflux-jujutsukaisen-s01.pages.dev/",
+                link: "https://animeflux-jujutsu-kaisen-s01.pages.dev/",
             },
             {
                 image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/b3da1326e07269ddd8d73475c5dabf2c.jpg",
@@ -78,7 +78,7 @@ function App() {
         actionMovies: [
             {
                 image: "https://static.animekai.to/9b/i/a/bd/67664ad7ae926@300.jpg",
-                link: "",
+                link: "https://animeflux-slf-s02.pages.dev/",
             },
             {
                 image:"https://static.animekai.to/d6/i/1/ff/679c4922e156f@300.jpg",
