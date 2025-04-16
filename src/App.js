@@ -24,8 +24,8 @@ function App() {
                 link: "https://animeflux-slf-s01.pages.dev/",
             },
             {
-                image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/bd5ae1d387a59c5abcf5e1a6a616728c.jpg",
-                link: "https://anime-flux-bleach-re3j-s01.pages.dev/",
+                image: "https://th.bing.com/th/id/OIP.7n0XeHw5zjwKsj2Uvc3L0wHaKe?cb=iwc&rs=1&pid=ImgDetMain",
+                link: "https://animeflux-sword-of-the-demon-hunter.pages.dev/",
             },
             {
                 image: "https://demonslayer-anime.com/hta/assets/img/img_kv.jpg",
