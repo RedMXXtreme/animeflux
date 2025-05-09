@@ -1,5 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #000000);
+}
+
+.scrollmenu1::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scrollbar for the row container */
+.flex.space-x-4.overflow-x-scroll.scrollbar-hide.p-2 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.flex.space-x-4.overflow-x-scroll.scrollbar-hide.p-2::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.scrollmenu1 > div {
+  scroll-snap-align: start;
+}
+
+/* Badge styles */
+.badge-red {
+  background-color: #7f1d1d; /* dark red */
+  color: #fca5a5; /* light red */
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-green {
+  background-color: #14532d; /* dark green */
+  color: #bbf7d0; /* light green */
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-tv {
+  background-color: #1e293b; /* dark slate */
+  color: #cbd5e1; /* light slate */
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
 div.row {
-  background-color: #333;
+  background-color: #0f2027 ;
   overflow: auto;
   white-space: nowrap;
 }
@@ -15,17 +70,6 @@ div.row a {
 div.row a:hover {
   background-color: #777;
 }
-
-
-
-.scrollmenu1 {
-  scroll-snap-type: x mandatory;
-}
-
-.scrollmenu1 > div {
-  scroll-snap-align: start;
-}
-
 
 /* From Uiverse.io by Nawsome */ 
 .pl {
