@@ -2,253 +2,248 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { FaRandom, FaSearch } from "react-icons/fa";
 
-
 function App() {
     const [loading, setLoading] = useState(true); // Step 1: Create loading state
     const Posters = {
         trending: [
             {
-                image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/65f92e6e315a931ef872da4b312442b8.jpg",
-                link: "https://https://animeflux-solo-leveling-arise-from-the-shadow-s02.pages.dev/",
+                title: "The Catcher in the Ballpark!",
+                image: "https://cdn.myanimelist.net/images/anime/1792/148616l.jpg",
+                link: "https://anime-flux-the-catcher-in-the-ballpark.pages.dev/",
+                cc: "EN",
+                eps: 12,
             },
             {
-                image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/82402f796b7d84d7071ab1e03ff7747a.jpg",
-                link: "https://animeflux-jujutsu-kaisen-s01.pages.dev/",
+                title: "Uma Musume: Cinderella Grey",
+                image: "https://cdn.myanimelist.net/images/manga/3/240780.jpg",
+                link: "https://2anime.xyz/embed/uma-musume-cinderella-grey-episode-5",
+                cc: "JP",
+                eps: 5,
             },
             {
-                image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/b3da1326e07269ddd8d73475c5dabf2c.jpg",
-                link: "https://animeflux-chainsawman-s01.pages.dev/",
+                title: "Compass2.0: Combat Providence Analysis System",
+                image: "https://cdn.myanimelist.net/images/anime/1538/142767.jpg",
+                link: "https://2anime.xyz/embed/compass20-combat-providence-analysis-system-episode-5",
+                cc: "EN",
+                eps: 5,
             },
             {
-                image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTp7vq4UrZIjGOagDWfRsbHkKwGb-IzZtzdguuRdfrmNo7PMXEqnulncHFFJo_-_WbXhEk46A_CjG3LgCy7Wd2QwedtXVjfrtHVi6RaoK8",
-                link: "https://animeflux-slf-s01.pages.dev/",
-            },
-            {
-                image: "https://th.bing.com/th/id/OIP.7n0XeHw5zjwKsj2Uvc3L0wHaKe?cb=iwc&rs=1&pid=ImgDetMain",
-                link: "https://animeflux-sword-of-the-demon-hunter.pages.dev/",
-            },
-            {
-                image: "https://demonslayer-anime.com/hta/assets/img/img_kv.jpg",
-                link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-hashira-training.pages.dev/",
-            },
-            {
-                image: "https://static1.animekai.to/28/i/d/60/67664938b51c4.jpg",
-                link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-swordsmith-village.pages.dev/",
-            },
-            {
-                image: "https://cdn.noitatnemucod.net/thumbnail/300x400/100/b51f863b05f30576cf9d85fa9b911bb5.png",
-                link: "https://animeflux-jujutsukaisen-s02.pages.dev/",
-            }
+                title: "Detective Conan",
+                image: "https://icdn.store/cover/detective-conan.png",
+                link: "https://2anime.xyz/embed/detective-conan-episode-1161",
+                cc: "JP",
+                eps: 1161,
+                },
+                {
+                title: "The Brilliant Healer's New Life in the Shadows",
+                image: "https://cdn.myanimelist.net/images/anime/1211/147335.jpg",
+                link: "https://2anime.xyz/embed/the-brilliant-healers-new-life-in-the-shadows-episode-6",
+                cc: "JP",
+                eps: 6,
+                },
+                {
+                title: "To Be Hero X",
+                image: "https://cdn.myanimelist.net/images/anime/1232/148474.jpg",
+                link: "https://2anime.xyz/embed/to-be-hero-x-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "The Mononoke Lecture Logs of Chuzenji-sensei",
+                image: "https://cdn.myanimelist.net/images/anime/1827/145858.jpg",
+                link: "https://2anime.xyz/embed/the-mononoke-lecture-logs-of-chuzenji-sensei-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "I've Been Killing Slimes for 300 Years and Maxed Out My Level 2nd Season",
+                image: "https://cdn.myanimelist.net/images/anime/1803/111792.jpg",
+                link: "https://2anime.xyz/embed/ive-been-killing-slimes-for-300-years-and-maxed-out-my-level-2nd-season-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "Rock wa Lady no Tashinami deshite",
+                image: "https://cdn.myanimelist.net/images/anime/1169/148459.jpg",
+                link: "https://2anime.xyz/embed/rock-wa-lady-no-tashinami-deshite-episode-6",
+                cc: "JP",
+                eps: 6,
+                },
+                {
+                title: "SHIROHIYO - Reincarnated as a Neglected Noble",
+                image: "https://cdn.myanimelist.net/images/anime/1059/147448.jpg",
+                link: "https://2anime.xyz/embed/shirohiyo-reincarnated-as-a-neglected-noble-raising-my-baby-brother-with-memories-from-my-past-life-episode-4",
+                cc: "JP",
+                eps: 4,
+                },
+                {
+                title: "The Shiunji Family Children",
+                image: "https://cdn.myanimelist.net/images/manga/2/264857.jpg",
+                link: "https://2anime.xyz/embed/the-shiunji-family-children-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "Anne Shirley",
+                image: "https://cdn.myanimelist.net/images/anime/1674/147871.jpg",
+                link: "https://2anime.xyz/embed/anne-shirley-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "Wind Breaker Season 2",
+                image: "https://cdn.myanimelist.net/images/anime/1526/148873.jpg",
+                link: "https://2anime.xyz/embed/wind-breaker-season-2-episode-6",
+                cc: "JP",
+                eps: 6,
+                },
+                {
+                title: "The Unaware Atelier Master",
+                image: "https://cdn.myanimelist.net/images/anime/1743/148272.jpg",
+                link: "https://2anime.xyz/embed/the-unaware-atelier-master-episode-6",
+                cc: "JP",
+                eps: 6,
+                },
+                {
+                title: "Once Upon a Witch's Death",
+                image: "https://cdn.myanimelist.net/images/anime/1620/148221.jpg",
+                link: "https://2anime.xyz/embed/once-upon-a-witchs-death-episode-6",
+                cc: "JP",
+                eps: 6,
+                },
+                {
+                title: "Guilty Gear Strive: Dual Rulers",
+                image: "https://cdn.myanimelist.net/images/anime/1199/147623.jpg",
+                link: "https://2anime.xyz/embed/guilty-gear-strive-dual-rulers-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "The Gorilla God's Go-To Girl",
+                image: "https://cdn.myanimelist.net/images/anime/1714/148317.jpg",
+                link: "https://2anime.xyz/embed/the-gorilla-gods-go-to-girl-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "Mobile Suit Gundam GQuuuuuuX",
+                image: "https://cdn.myanimelist.net/images/anime/1052/148743.jpg",
+                link: "https://2anime.xyz/embed/mobile-suit-gundam-gquuuuuux-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "From Old Country Bumpkin to Master Swordsman",
+                image: "https://cdn.myanimelist.net/images/manga/1/296669.jpg",
+                link: "https://2anime.xyz/embed/from-old-country-bumpkin-to-master-swordsman-my-hotshot-disciples-are-all-grown-up-now-and-they-wont-leave-me-alone-episode-5",
+                cc: "JP",
+                eps: 5,
+                },
+                {
+                title: "Go Go Loser Ranger 2nd Season",
+                image: "https://cdn.myanimelist.net/images/anime/1405/147694.jpg",
+                link: "https://2anime.xyz/embed/go-go-loser-ranger-2nd-season-episode-4",
+                cc: "JP",
+                eps: 4,
+                },
+
+
+            // Add similar structure for other entries
         ],
         Thriller: [
             {
-                image: "https://static.animekai.to/b8/i/f/ae/67664a35ada83@300.jpg",
-                link: "https://animeflux-code-geass-rozeof-there-capture.pages.dev/",
+            title: "Code Geass: Rozeof There Capture",
+            image: "https://static.animekai.to/b8/i/f/ae/67664a35ada83@300.jpg",
+            link: "https://animeflux-code-geass-rozeof-there-capture.pages.dev/",
+            cc: "EN",
+            eps: 24,
             },
             {
-                image: "https://static.animekai.to/69/i/c/a7/676649399560d@300.jpg",
-                link: "https://animeflux-link-click-2.pages.dev/",
+            title: "Link Click 2",
+            image: "https://static.animekai.to/69/i/c/a7/676649399560d@300.jpg",
+            link: "https://animeflux-link-click-2.pages.dev/",
+            cc: "JP",
+            eps: 12,
             },
-            {
-                image: "https://static.animekai.to/b5/i/e/2c/676649f8a3e07@300.jpg",
-                link: "https://animeflux-psyco-pass-3-first-inspector.pages.dev/",
-            },
-            {
-                image: "https://static.animekai.to/c8/i/b/0e/67664a77256df@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/5f/i/1/37/676649371ece4@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/b5/i/1/2a/67664980ec7d0@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/fb/i/4/0b/6766495e55d54@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/e6/i/3/83/6766496e936a6@300.jpg",
-                link: "",
-            },
-
+           
         ],
         actionMovies: [
             {
-                image: "https://static.animekai.to/9b/i/a/bd/67664ad7ae926@300.jpg",
-                link: "https://animeflux-slf-s02.pages.dev/",
+            title: "Action Movie 1",
+            image: "https://static.animekai.to/9b/i/a/bd/67664ad7ae926@300.jpg",
+            link: "https://example.com/action-movie-1",
+            cc: "EN",
+            eps: 1,
             },
             {
-                image:"https://static.animekai.to/d6/i/1/ff/679c4922e156f@300.jpg",
-                link: ""
+            title: "Action Movie 2",
+            image: "https://static.animekai.to/d6/i/1/ff/679c4922e156f@300.jpg",
+            link: "https://example.com/action-movie-2",
+            cc: "JP",
+            eps: 1,
             },
-            {
-                image:"https://static.animekai.to/fa/i/3/93/67664a559994b@300.jpg",
-                link: ""
-            },
-            {
-                image:"https://static.animekai.to/5e/i/e/e7/67664a6eed6be@300.jpg",
-                link: ""
-            },
-            {
-                image:"https://static.animekai.to/d4/i/8/e2/677e939d95b5c@300.jpg",
-                link: ""
-            },
-            {
-                image:"https://static.animekai.to/02/i/a/41/67664920ca41a@300.jpg",
-                link: ""
-            },
-            {
-                image:"https://static.animekai.to/ef/i/7/81/676649604795f@300.jpg",
-                link: ""
-            },
-            {
-                image:"https://static.animekai.to/d6/i/1/ff/679c4922e156f@300.jpg",
-                link: ""
-            },
+            // Add similar structure for other entries
         ],
         comedyMovies: [
             {
                 image: "https://static.animekai.to/31/i/4/14/67664938c8f51@300.jpg",
-                link: "",
+                link: "https://example.com/comedy-movie-1",
+                cc: "EN",
+                eps: 1,
             },
             {
                 image: "https://static.animekai.to/dc/i/1/c8/67664941d062b@300.jpg",
-                link  : "",
+                link: "https://example.com/comedy-movie-2",
+                cc: "JP",
+                eps: 1,
             },
-            {
-                image: "https://static.animekai.to/2c/i/1/fb/67664a390d313@300.jpg",
-                link  : "",
-            },
-            {
-                image: "https://static.animekai.to/9e/i/8/45/67664a28e0da0@300.jpg",
-                link  : "",
-            },
-            {
-                image: "https://static.animekai.to/26/i/c/9c/67664a7b71d19@300.jpg",
-                link  : "",
-            },
-            {
-                image: "https://static.animekai.to/2e/i/a/a7/676649c604ff9@300.jpg",
-                link  : "",
-            },
-            {
-                image: "https://static.animekai.to/84/i/7/60/6783ef67bb6a4@300.jpg",
-                link  : "",
-            },
-            {
-                image: "https://static.animekai.to/4a/i/e/73/6783f0076823e@300.jpg",
-                link  : "",
-            },
-
+            // Add similar structure for other entries
         ],
         horrorMovies: [
             {
                 image: "https://static.animekai.to/ff/i/5/cb/67664a779d2c2@300.jpg",
-                link: "",
+                link: "https://example.com/horror-movie-1",
+                cc: "EN",
+                eps: 1,
             },
             {
                 image: "https://static.animekai.to/7e/i/4/8b/6766493d27431@300.jpg",
-                link: "",
+                link: "https://example.com/horror-movie-2",
+                cc: "JP",
+                eps: 1,
             },
-            {
-                image: "https://static.animekai.to/66/i/6/6e/67664aa40414d@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/d2/i/9/aa/676649657dd8a@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/46/i/6/cb/67664a5f692c8@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/e5/i/1/1e/6796f95d7c31b@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/87/i/6/45/67c315dfdf0c5@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/94/i/d/99/67849c61ef884@300.jpg",
-                link: "",
-            },
+            // Add similar structure for other entries
         ],
         romanceMovies: [
             {
-                image: "https://static.animekai.to/1b/i/8/2a/6766499dd3fad@300.jpg",
-                link: "",
+                title: "Yandere Dark Elf: She Chased Me All the Way from Another World",
+                image: "https://img.flawlessfiles.com/_r/300x400/100/3a/ca/3aca0826a0b696c73bddb24bcb4aa2b4/3aca0826a0b696c73bddb24bcb4aa2b4.jpg",
+                link: "https://yandere-dark-elf-she-chased-me-all-the-way-from-another-wo.pages.dev/",
+                cc: "5",
+                eps: "12",
             },
             {
                 image: "https://static.animekai.to/f8/i/3/b8/677f1aaf7382d@300.jpg",
-                link: "",
-
+                link: "https://example.com/romance-movie-2",
+                cc: "JP",
+                eps: 1,
             },
-
-            {
-                image: "https://static.animekai.to/dc/i/1/c8/67664941d062b@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/26/i/c/9c/67664a7b71d19@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/48/i/2/fe/677d56f5276f4@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/43/i/a/d4/677c071ad504a@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/84/i/9/c8/67979b6317fd2@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/66/i/e/90/67780faf0eabe@300.jpg",
-                link: "",
-            },
-
+            // Add similar structure for other entries
         ],
         drama: [
             {
                 image: "https://static.animekai.to/0f/i/4/57/6776c22647a2b@300.jpg",
-                link: "",
+                link: "https://example.com/drama-1",
+                cc: "EN",
+                eps: 24,
             },
             {
                 image: "https://static.animekai.to/d4/i/8/e2/677e939d95b5c@300.jpg",
-                link: "",
+                link: "https://example.com/drama-2",
+                cc: "JP",
+                eps: 12,
             },
-            {
-                image: "https://static.animekai.to/24/i/4/f3/6783f05a803ec@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/27/i/5/8e/677c0793f40c2@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/8c/i/5/60/6781b2ff4bfa2@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/08/i/5/36/67664a33f2129@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/bc/i/a/37/67814f97efb26@300.jpg",
-                link: "",
-            },
-            {
-                image: "https://static.animekai.to/5a/i/9/b2/67664a1990c8a@300.jpg",
-                link: "",
-            },
-            
+            // Add similar structure for other entries
         ],
     };
     // Step 2: Simulate loading
@@ -316,16 +311,11 @@ function App() {
 
 const Header = () => {
     const searchLinks = {
+    
     "Solo Leveling Season 2 -Arise from the Shadow": { link: "https://animeflux-solo-leveling-arise-from-the-shadow-s02.pages.dev/", img: "https://static1.animekai.to/86/i/e/d4/67829cc6b52b8.jpg", year: "2025", type: "TV", rating: "R" },
     "Solo Leveling": { link: "https://animeflux-solo-leveling-s01.pages.dev/", img: "https://static1.animekai.to/a6/i/b/01/67664ac5d6eaa.jpg", year: "2024", type: "TV", rating: "R" },
     "Death Note": { link: "https://animeflux-deathnote.pages.dev/", img: "https://static1.animekai.to/7e/i/f/bf/67664a569f3a5@100.jpg", year: "2006", type: "TV", rating: "R" },
-    "Attack on Titan": { link: "https://animeflux-attack-on-titan.pages.dev/", img: "https://static1.animekai.to/45/i/b/79/67664a45311fc.jpg", year: "2013", type: "TV", rating: "R" },
-    "Attack on Titan Season 2": { link: "https://animeflux-attack-on-titan-s02.pages.dev/", img: "https://static1.animekai.to/5e/i/a/0f/67664974bab5b.jpg", year: "2017", type: "TV", rating: "R" },
-    "Attack on Titan Season 3 Part 1": { link: "https://animeflux-attack-on-titan-s03-part-1.pages.dev/", img: "https://static1.animekai.to/db/i/3/66/6766491f06b76@300.jpg", year: "2018", type: "TV", rating: "R" },
-    "Attack on Titan Season 3 Part 2": { link: "https://animeflux-attack-on-titan-s03-part-2.pages.dev/", img: "https://static1.animekai.to/93/i/b/e9/6766496c980c9@300.jpg", year: "2019", type: "TV", rating: "R" },
-    "Attack on Titan Season 4 Part 1": { link: "https://animeflux-attack-on-titan-s04-part-1.pages.dev/", img: "https://static1.animekai.to/83/i/4/9a/6766499bd3723@300.jpg", year: "2020", type: "TV", rating: "R" },
-    "Attack on Titan Season 4 Part 2": { link: "https://animeflux-attack-on-titan-s04-part-2.pages.dev/", img: "https://static1.animekai.to/2d/i/0/1e/67664a0891c70@300.jpg", year: "2022", type: "TV", rating: "R" },
-    "Attack on Titan Speacial": { link: "https://animeflux-attack-on-titan-special.pages.dev/", img: "https://static1.animekai.to/a0/i/f/68/6766493f4e009@300.jpg", year: "2023", type: "TV", rating: "R" },    
+    "Shingeki no Kyojin": { link: "https://example.com/breaking-bad", img: "https://animekai.to/assets/uploads/37585a39fe8c8d8fafaa2c7bfbf5374ecac859ea6a0886b7dc.png", year: "2013", type: "TV", rating: "R" },
     "Demon Slayer: Kimetsu no Yaiba": { link: "https://animeflux-demon-slayer-kimetsu-no-yaiba-arc.pages.dev/", img: "https://static1.animekai.to/70/i/5/79/67664a9bdad80@300.jpg", year: "2019", type: "TV", rating: "PG-R" },
     "Demon Slayer: Kimetsu no Yaiba Mugen Train Arc": {link:"https://animeflux-demon-slayer-kimetsu-no-yaiba-mugen-train-arc.pages.dev/", img: "https://static1.animekai.to/78/i/0/44/67664a81b5dd4@300.jpg", year: "2021", type: "Movie", rating: "PG-R"},
     "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc": {link:"https://animeflux-demon-slayer-kimetsu-no-yaiba-entertainment-arc.pages.dev/", img: "https://static1.animekai.to/d3/i/e/9c/67664a00ed86e@300.jpg", year: "2021", type: "TV", rating: "PG-R"},
@@ -336,19 +326,6 @@ const Header = () => {
     "Jujutsu Kaisen S2": {link:"https://animeflux-jujutsukaisen-s02.pages.dev/", img: "https://static1.animekai.to/44/i/9/b8/6766493099d89@100.jpg", year: "2021", type: "TV", rating: "PG-13"},
     "Jujutsu Kaisen 0": {link:"", img: "https://static1.animekai.to/8d/i/d/0f/67664a6c4ae80@100.jpg", year: "2022", type: "TV", rating: "PG-13"},
     "Puka Puka Juju": {link:"", img: "https://static1.animekai.to/a5/i/b/76/67664a0d0aeb9@100.jpg", year: "2023", type: "TV", rating: "PG-13"},
-    "Sakamot Days": { link:"https://animeflux-sakamoto-days.pages.dev/", img: "https://static1.animekai.to/09/i/e/90/6782958e57c23.jpg", year: "2025", type: "TV", rating: "R" },
-    "Tower of god s01": { link:"https://animeflux-tower-of-god-s01.pages.dev/", img: "https://static1.animekai.to/ca/i/8/0a/67664a6d3f5a2.jpg", year: "2020", type: "TV", rating: "PG-13" },
-    "Tower of god s02": { link:"https://animeflux-tower-of-god-s02.pages.dev/", img: "https://static1.animekai.to/3c/i/b/05/676649ad3a95d.jpg", year: "2024", type: "TV", rating: "PG-13" },
-    "Wind Breaker": { link:"https://animeflux-windbreaker.pages.dev/", img: "https://static1.animekai.to/bd/i/5/4c/676649ee7430d.jpg", year: "2024", type: "TV", rating: "PG-13" },
-    "One Punch man s01": { link:"https://animeflux-one-punch-man-s01.pages.dev/", img: "https://static1.animekai.to/db/i/0/b6/67664ab866dbf.jpg", year: "2015", type: "TV", rating: "R" },
-    "One Punch man s02": { link:"https://animeflux-one-punch-man-s02.pages.dev/", img: "https://static1.animekai.to/8d/i/b/f4/676649c3e82f2.jpg", year: "2019", type: "Tv", rating: "R" },
-    "Ao Ashi": { link:"https://animeflux-ao-ashi.pages.dev/", img: "https://static1.animekai.to/03/i/3/1f/6766494451516.jpg", year: "2022", type: "TV", rating: "PG-13" },
-    "Blue Lock s01": { link:"https://animeflux-bluelock-s01.pages.dev/", img: "https://static1.animekai.to/34/i/3/bd/67664ab2e7771.jpg", year: "2022", type: "TV", rating: "PG-13" },
-    "Blue Lock s02": { link:"devhttps://animeflux-bluelock-s02.pages./", img: "https://static1.animekai.to/56/i/d/36/67664aa7a69dd.jpg", year: "2024", type: "TV", rating: "PG-13" },
-    "God of high school": { link:"/https://animeflux-god-of-high-school.pages.dev", img: "https://static1.animekai.to/4d/i/1/d8/67664984e84a9.jpg", year: "2020", type: "TV", rating: "PG-13" },
-    "Psyco Pass 1": { link:"https://animeflux-psyco-pass-2-first-inspector.pages.dev/", img: "https://static1.animekai.to/f1/i/f/ba/67664970838b9.jpg", year: "2012", type: "TV", rating: "R" },
-    "Code Geass: Lelouch of the Rebellion": { link:"https://animeflux-code-geass-lelouch-of-the-rebellion.pages.dev/", img: "https://static1.animekai.to/4d/i/3/52/67664928cd5ca.jpg", year: "2006", type: "TV", rating: "R" },
-    "That Time I Got Reincarnated as a Slime S01": { link:"https://animeflux-that-time-i-got-reicarnated-as-slime-s01.pages.dev/", img:"https://static1.animekai.to/12/i/9/08/676649d245eb3.jpg", year: "2018", type: "TV", rating: "PG-13" },
   };
 
     const [searchQuery, setSearchQuery] = useState("");
@@ -391,24 +368,19 @@ const Header = () => {
             "https://animeflux-s.pages.dev/",
             "https://animeflux-sololevelingseason2arisefromtheshado-s02.pages.dev/",
             "https://animeflux-solo-leveling-s01.pages.dev/",
-	    "https://animeflux-attack-on-titan-s02.pages.dev/",
-	    "https://animeflux-attack-on-titan.pages.dev/",
-	    "https://animeflux-attack-on-titan-s03-part-2.pages.dev/",
-	    "https://animeflux-attack-on-titan-s03-part-1.pages.dev/",
-	    "https://animeflux-attack-on-titan-s04-part-1.pages.dev/",
-	    "https://animeflux-attack-on-titan-s04-part-2.pages.dev/",
-	    
         ]
         const randomPage = pages[Math.floor(Math.random() * pages.length)];
         window.location.href = randomPage;
     };
 
     return (
-        <header className="flex justify-between items-center p-4 bg-black fixed w-full z-10">
+        <header className="flex justify-between items-center p-4 bg-black w-full z-10">
             <div className="flex items-center space-x-4">
                 <a href='/'> <img src="https://i.postimg.cc/hGXVFjTn/DALL-E-2025-03-25-19-51-32-A-sleek-dark-themed-logo-for-Anime-Flux-featuring-bold-anime-inspir.webp" alt="Anime Flux" style={{ width: "2rem"}} /></a>
+                
                 <nav className="hidden md:flex space-x-4">
-                    <a href="#" className="hover:text-gray-400">Home</a>
+                    
+                    <a href="/" className="hover:text-gray-400">Home</a>
                     <a href="#" className="hover:text-gray-400">TV Shows</a>
                     <a href="#" className="hover:text-gray-400">Movies</a>
                     <a href="#" className="hover:text-gray-400">New & Popular</a>
@@ -416,13 +388,11 @@ const Header = () => {
                 </nav>
             </div>
             <div className="flex items-center space-x-4" style={{ position: "absolute", right: "2rem" }}>
-                <i className="fas fa-search hover:text-gray-400"></i>
-                <i className="fas fa-bell hover:text-gray-400"></i>
                 <i className="fas fa-random hover:text-gray-400 cursor-pointer" onClick={navigateToRandomPage}></i> {/* New random icon with functionality */}
                 <img src="https://i.postimg.cc/hGXVFjTn/DALL-E-2025-03-25-19-51-32-A-sleek-dark-themed-logo-for-Anime-Flux-featuring-bold-anime-inspir.webp" alt="User profile picture" className="w-8 h-8 rounded" />
         </div>
         <div className="relative w-full max-w-md mx-auto">
-        <div className="flex items-center border border-gray-400 rounded-lg overflow-hidden bg-white p-2">
+        <div className="flex items-center border border-gray-400 rounded-lg overflow-hidden bg-white">
           <FaSearch className="text-gray-500 ml-2" />
           <input
             type="text"
@@ -433,14 +403,17 @@ const Header = () => {
           />
         </div>
         {filteredMovies.length > 0 && (
-          <ul className="absolute w-full bg-gray-800 border border-gray-600 mt-1 rounded-lg shadow-lg overflow-hidden">
+          <ul
+            className={`absolute w-full bg-gray-800 border border-gray-600 mt-1 rounded-lg shadow-lg overflow-hidden z-10 ${
+              filteredMovies.length > 4 ? 'overflow-y-scroll max-h-60' : ''
+            }`}
+          >
             {filteredMovies.map((movie, index) => (
               <li
                 key={index}
                 className="flex items-center p-2 cursor-pointer hover:bg-gray-700"
                 onClick={() => window.location.href = searchLinks[movie].link}
                 onKeyDown={handleKeyPress}
-                
               >
                 <img src={searchLinks[movie].img} alt={movie} className="w-12 h-12 rounded-md mr-3" />
                 <div>
@@ -453,117 +426,175 @@ const Header = () => {
         )}
         </div>
         </header>
-        
     );
 };
 
 const Banner = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const images = [
-        "https://rare-gallery.com/mocahbig/1376871-jujutsu-kaisen-anime-characters-4k-pc-wallpaper.jpg",
-        "https://wallpapercave.com/wp/wp11268662.jpg",
-        "https://static.animecorner.me/2023/11/1698837096-72473.jpg",
-        "https://horizons.pokemon.com/images/share-fb.jpg",
-	"https://cdn.oneesports.gg/cdn-data/2024/09/Anime_Shangri-LaFrontier_Season2_PromoPoster.jpg",
-	"https://anitrendz.net/news/wp-content/uploads/2025/03/makina-san-is-a-love-bot-anime-key-visual-scaled-e1742934440120.jpg",
-        // Add more image URLs as needed
+    const [currentIndex, setCurrentIndex] = React.useState(0);
+
+    const slides = [
+        {
+            title: "JUJUTSU KAISEN",
+            description: "A high school student becomes a Jujutsu Sorcerer to fight against cursed spirits.",
+            rating: "R",
+            release: "2022",
+            quality: "HD",
+            cc: "24",
+            eps: "24",
+            genre: "Adventure, Comedy, Fantasy",
+            image: "https://rare-gallery.com/mocahbig/1376871-jujutsu-kaisen-anime-characters-4k-pc-wallpaper.jpg",
+            watchNowLink: "https://animeflux-jujutsu-kaisen-s01.pages.dev/",
+        },
+        {
+            title: "DEMON SLAYER",
+            description: "A young boy becomes a demon slayer to save his sister and avenge his family.",
+            rating: "R",
+            release: "2019",
+            quality: "HD",
+            cc: "26",
+            eps: "26",
+            genre: "Action, Supernatural, Dark Fantasy",
+            image: "https://wallpapercave.com/wp/wp11268662.jpg",
+            watchNowLink: "https://animeflux-demon-slayer-kimetsu-no-yaiba-arc.pages.dev/",
+        },
+        {
+            title: "SOLO LEVELING",
+            description: "A weak hunter gains the ability to level up and becomes the strongest hunter in the world.",
+            rating: "R",
+            release: "2024",
+            quality: "HD",
+            cc: "12",
+            eps: "12",
+            genre: "Action, Adventure, Supernatural",
+            image: "https://static.animecorner.me/2023/11/1698837096-72473.jpg",
+            watchNowLink: "https://animeflux-solo-leveling-s01.pages.dev/",
+        },
+        {
+            title: "The Shiunji Family Children",
+            description: "The story follows the life of Arata Shiunji and his six siblings as they navigate the complexities of their relationships after discovering they are not biologically related.",
+            rating: "PG",
+            release: "1997",
+            quality: "HD",
+            cc: "1000",
+            eps: "1000",
+            genre: "Adventure, Fantasy, Comedy",
+            image: "https://static1.animekai.to/f9/i/f/71/67fe6a71ccb62.jpg",
+            watchNowLink: "https://animeflux-the-shiunji-family-children.pages.dev/",
+        },
     ];
 
-    const texts = [
-        "Jujutsu Kaisen - Experience the thrill!",
-        "Epic Adventures Await - Watch Now!",
-        "Dive into the Anime World!",
-        "Catch 'em all in Pokemon!",
-	"Shangri-La Frontier",
-	"Makina-san's a Love Bot",
-        // Add more texts corresponding to the images
-    ];
-
-    const links = [
-        "https://www.youtube.com/watch?v=Pm-wNmS9RGI",
-        "https://www.youtube.com/watch?v=wyiZWYMilgk",
-        "https://www.youtube.com/watch?v=Px3mYbqYSEM",
-        "https://youtu.be/_c_hMehCORQ?si=wJgHL9AtGSxZcftJ",
-	"https://www.youtube.com/watch?v=VA0rTiDlm8w&ab_channel=Crunchyroll",
-	"https://www.youtube.com/watch?v=kpTMzdEpciA&ab_channel=DailyAnime%21",
-        // Add more links corresponding to the images
-    ];
-
-    const links1 = [
-        "https://animeflux-jujutsukaisen-s01.pages.dev/",
-        "https://animeflux-demon-slayer-kimetsu-no-yaiba-arc.pages.dev/",
-        "https://animeflux-solo-leveling-s01.pages.dev/",
-        "https://youtu.be/_c_hMehCORQ?si=wJgHL9AtGSxZcftJ",
-	"https://animeflux-slf-s02.pages.dev/",
-	"https://animeflux-makina-san's-a-love-bot.pages.dev/",
-        // Add more links corresponding to the images
-    ];
-
-    const nextImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
 
-    const prevImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
     };
 
-    useEffect(() => {
-        const interval = setInterval(nextImage, 5000); // Change image every 5 seconds
+    React.useEffect(() => {
+        const interval = setInterval(nextSlide, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
-        return () => clearInterval(interval); // Cleanup interval on unmount
-    }, [images.length]);
+    const currentSlide = slides[currentIndex];
 
     return (
-        <div className="relative h-[60vh] bg-cover bg-center" style={{ backgroundImage: `url('${images[currentIndex]}')` }}>
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-            <div className="absolute bottom-10 left-10">
-                <h1 className="text-white text-3xl font-bold">{texts[currentIndex]}</h1> {/* Display the corresponding text */}
-                <div className="mt-4 flex space-x-2">
-                    <img 
-                        src="https://i.pinimg.com/736x/fe/63/3f/fe633f65fbdb702027be5beeaaf1ce92.jpg" style={{ transform: 'scaleX(-1)' }} 
-                        className="w-10 h-10 cursor-pointer" 
-                        onClick={prevImage} 
-                    />
-                    <img 
-                        src="https://i.pinimg.com/736x/fe/63/3f/fe633f65fbdb702027be5beeaaf1ce92.jpg" 
-                        className="w-10 h-10 cursor-pointer" 
-                        onClick={nextImage} 
-                    />
+        <div
+            className="relative h-[70vh] bg-cover bg-center flex items-center"
+            style={{ backgroundImage: `url('${currentSlide.image}')` }}
+        >
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>
+            <div className="relative z-10 max-w-4xl p-10 text-white">
+                <h1 className="text-5xl font-extrabold mb-4">{currentSlide.title}</h1>
+                <div className="flex space-x-2 mb-2">
+                    <span className="bg-red-800 text-red-300 px-2 py-1 rounded text-xs font-semibold">CC {currentSlide.cc}</span>
+                    <span className="bg-green-800 text-green-300 px-2 py-1 rounded text-xs font-semibold">{currentSlide.eps}</span>
+                    <span className="text-sm font-semibold">TV</span>
+                    <span className="ml-4 text-sm">{currentSlide.genre}</span>
                 </div>
-                <div className="mt-4">
-                    <a href={links[currentIndex]} target="_blank" rel="noopener noreferrer">
-                        <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
-                            Watch Trailer
+                <p className="max-w-lg mb-6">{currentSlide.description}</p>
+                <div className="bg-black bg-opacity-70 rounded-lg p-4 w-max flex space-x-8 mb-6">
+                    <div>
+                        <p className="text-gray-400 text-xs">Rating</p>
+                        <p className="font-bold">{currentSlide.rating}</p>
+                    </div>
+                    <div>
+                        <p className="text-gray-400 text-xs">Release</p>
+                        <p className="font-bold">{currentSlide.release}</p>
+                    </div>
+                    <div>
+                        <p className="text-gray-400 text-xs">Quality</p>
+                        <p className="font-bold">{currentSlide.quality}</p>
+                    </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                    <a href={currentSlide.watchNowLink} target="_blank" rel="noopener noreferrer">
+                        <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded font-semibold">
+                            WATCH NOW
                         </button>
                     </a>
-                    <a href={links1[currentIndex]} target="_blank" rel="noopener noreferrer" style={{ marginLeft: '10px' }}>
-                        <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
-                            Watch Now
-                        </button>
-                    </a>
+                    <button className="text-white text-2xl" title="Bookmark">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5v14l7-7 7 7V5z" />
+                        </svg>
+                    </button>
                 </div>
+            </div>
+            <div className="absolute bottom-10 right-10 flex items-center space-x-4 text-white">
+                <button onClick={prevSlide} title="Previous" className="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <span className="text-lg font-semibold">{currentIndex + 1} / {slides.length}</span>
+                <button onClick={nextSlide} title="Next" className="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
         </div>
     );
 };
+
+const Badge = ({ label, color }) => (
+    <span
+        className={`text-xs px-2 py-1 rounded-full font-semibold ${
+            color === 'red'
+                ? 'bg-red-900 text-red-300'
+                : 'bg-green-900 text-green-300'
+        }`}
+    >
+        {label}
+    </span>
+);
 
 const Row = ({ title, posters = [] }) => {
     return (
         <div className="mt-8">
             <h2 className="text-2xl font-bold mb-4" aria-label={title}>{title}</h2>
             <div className="flex space-x-4 overflow-x-scroll scrollbar-hide p-2">
-            
-                <div className="scrollmenu1">
+                <div className="scrollmenu1 flex space-x-4">
                     {posters.slice(0, 15).map((poster, index) => (
-                    <a href={poster.link} target="_blank" rel="noopener noreferrer" key={index}>
-                        <img 
-                            src={poster.image} 
-                            alt={`Movie poster ${index + 1}`} 
-                            className="w-48 h-72 object-cover rounded" 
-                        />
-                    </a>
-                ))}
-            </div>
+                        <a href={poster.link} target="_blank" rel="noopener noreferrer" key={index} className="flex-shrink-0 w-40">
+                            <img
+                                src={poster.image}
+                                alt={`Movie poster ${index + 1}`}
+                                className="w-full h-60 object-cover rounded-lg"
+                            />
+                            <p className="mt-2 text-white text-sm truncate" title={poster.title}>{poster.title}</p>
+                            <div className="flex items-center space-x-2 mt-1">
+                                {poster.cc !== undefined && (
+                                    <span className="badge-red">CC {poster.cc}</span>
+                                )}
+                                {poster.eps !== undefined && (
+                                    <span className="badge-green">{poster.eps}</span>
+                                )}
+                                <span className="badge-tv">TV</span>
+                            </div>
+                        </a>
+                    ))}
+                </div>
             </div>
         </div>
     );
