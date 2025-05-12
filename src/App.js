@@ -481,7 +481,20 @@ const Banner = () => {
             image: "https://static1.animekai.to/f9/i/f/71/67fe6a71ccb62.jpg",
             watchNowLink: "https://animeflux-the-shiunji-family-children.pages.dev/",
         },
+	    {
+            title: "Attack on Titan",
+            description: "Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called titans, forcing humans to hide in fear behind enormous concentric walls.",
+            rating: "R",
+            release: "2013",
+            quality: "HD",
+            cc: "25",
+            eps: "25",
+            genre: "Adventure, Fantasy, Comedy",
+            image: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GR751KNZY-backdrop_wide",
+            watchNowLink: "https://attack-on-titan.pages.dev/",
+        },
     ];
+	
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
